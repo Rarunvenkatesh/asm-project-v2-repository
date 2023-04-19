@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jobs List</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+            body {
+        background-color: #f8f9fa;
+    }
+
+.card {
+	border: none;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	transition: box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.card-text {
+	font-size: 16px;
+	margin-bottom: 5px;
+}
+
+    </style>
+</head>
+<body>
+   <form action="/mechjob" method="post">
+	<div class="container mt-5">
+		<h1 class="text-center mb-5">Jobs List</h1>
+		<div class="row">
+				
+				
+						<%for(let i = 0; i<name.length; i++){%>
+							
+									<div class="col-md-4 mb-4">
+							<div class="card">
+							<div class="card-body">
+						<h5 class="card-title"><%= name[i].name %></h5>
+						<p class="card-text"><%= email[i].email %></p>
+						<p class="card-text"><%=address[i].address %></p>
+						<p class="card-text"><%= pincode[i].pincode %></p>
+						<a href="#" class="btn btn-primary">select Job</a>
+					</div>
+				</div>
+			</div>
+						<%}%>
+						
+					
+				
+			
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</form> 
+</body>
+</html>
